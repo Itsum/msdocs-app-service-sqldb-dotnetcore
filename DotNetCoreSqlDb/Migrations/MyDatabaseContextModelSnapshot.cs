@@ -30,8 +30,10 @@ namespace DotNetCoreSqlDb.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
+                    /*b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");*/
+                    b.Property<string>("Fullname")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
